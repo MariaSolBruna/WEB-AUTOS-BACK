@@ -1,0 +1,46 @@
+<div class="container d-flex justify-content-center mt-5"><h2>MODIFICAR PRODUCTO</h2></div>
+
+<div class="container bg-light">
+<form action="/editProduct" method="POST" enctype="multipart/form-data">
+
+
+    <div class="mb-3">
+    <label for="Modelo" class="form-label">Modelo</label>
+    <input type="text" class="form-control" id="Modelo" name="Modelo" value="{{product.Modelo}}">
+  </div> 
+  <div class="mb-3">
+    <label for="Marca" class="form-label">Marca</label>
+    <input type="text" class="form-control" id="Marca" name="Marca" value="{{product.Marca}}">
+  </div>
+    <div class="mb-3">
+    <label for="Version" class="form-label">Versión</label>
+    <input type="text" class="form-control" id="Version" name="Versión" value="{{product.Versión}}">
+  </div>
+      <div class="mb-3">
+    <label for="Año" class="form-label">Año</label>
+    <input type="text" class="form-control" id="Año" name="Año" value="{{product.Año}}">
+  </div>
+      <div class="mb-3">
+    <label for="Combustible" class="form-label">Combustible</label>
+    <input type="text" class="form-control" id="Combustible" name="Combustible" value="{{product.Combustible}}">
+  </div>
+      <div class="mb-3">
+    <label for="Motor" class="form-label">Motor</label>
+    <input type="text" class="form-control" id="Motor" name="Motor" value="{{product.Motor}}">
+  </div>
+      <div class="mb-3">
+    <label for="Precio" class="form-label">Precio</label>
+    <input type="text" class="form-control" id="Precio" name="Precio" value="{{product.Precio}}">
+  </div>
+  <input type="text" value={{product.Imagen}} name="previousImage" hidden>
+   <div class="mb-3">
+    <label for="Imagen" class="form-label">Imagen</label>
+    <input type="file" class="form-control" id="Imagen" name="Imagen" value="{{product.Imagen}}">
+  </div>
+  
+  <input type="submit" class="btn btn-success" value="CONFIRMAR">
+  <a href="/deleteProduct/{{product.Modelo}}"><input type="button" value="BORRAR" class="btn btn-danger"> </a>
+  <a href="/"><input type="button" value="CANCELAR" class="btn btn-warning"> </a>
+</form>
+
+</div>

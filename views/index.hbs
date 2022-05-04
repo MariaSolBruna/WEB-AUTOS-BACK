@@ -1,0 +1,30 @@
+<h1 class="container d-flex justify-content-center mt-3"> TABLA DE PRODUCTOS CON CRUD </h1>
+
+<div class="container-fluid my-4">
+    <div class="row">
+          <div class="col-12 d-flex justify-content-center mb-3"><a href="/addItem"><button class="btn btn-warning ">AGREGAR PRODUCTO</button></a></div>
+    {{#each products}}
+    <div class="col-12 col-lg-4 my-2 ">
+      <div class="card border border-warning rounded">
+        <div class="d-flex justify-content-center mt-1">
+        <img class="imgTabla my-2" src="{{imageURL}}" alt="{{Modelo}}">
+        </div>
+        <div class="card-body text-center">
+          <h2 class="card-title text-uppercase "><mark>{{Modelo}}</mark></h2>
+          <h5 class="card-title">{{Marca}}</h5>
+          <h5 class="card-title">{{Versión}}</h5> 
+          <h5 class="card-title">{{Año}}</h5> 
+          <h5 class="card-title">{{Combustible}}</h5> 
+          <h5 class="card-title">{{Motor}}</h5> 
+          <h4 class="card-title">$ {{Precio}}</h4> 
+          <a href="/handleEdit/{{Modelo}}"><button class="btn btn-danger">ELIMINAR</button></a>
+          <a href="/handleEdit/{{Modelo}}"><button class="btn btn-primary ">MODIFICAR</button></a>
+        </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+</div>
+
+
+
